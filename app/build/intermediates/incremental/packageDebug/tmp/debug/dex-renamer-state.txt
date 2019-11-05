@@ -1,0 +1,4 @@
+#Tue Nov 05 12:23:02 SGT 2019
+base.0=C\:\\Users\\Asus\\AndroidStudioProjects\\ProgmobKelompok9\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
