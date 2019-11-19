@@ -4,8 +4,16 @@ android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.example.loginsqlite1"
-        minSdkVersion 16
+
+//        buildConfigField "String", "BASE_URL", "\"http://192.168.43.106:8000/api/\""
+//        buildConfigField "String", "BASE_URL_IMAGE", "\"http://192.168.43.106:8000/image/\""
+//        buildConfigField "String", "BASE_URL_DOCUMENT", "\"http://192.168.43.106:8000/file/\""
+        buildConfigField "String", "BASE_URL", "\"https://bacain.000webhostapp.com/api/\""
+        buildConfigField "String", "BASE_URL_IMAGE", "\"https://bacain.000webhostapp.com/image/\""
+        buildConfigField "String", "BASE_URL_DOCUMENT", "\"https://bacain.000webhostapp.com/file/\""
+
+        applicationId "com.example.progmobkelompok9"
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -24,8 +32,18 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original'
+    implementation "com.mikepenz:materialdrawer:6.1.2"
+    implementation "com.google.android.material:material:1.2.0-alpha01"
+
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.airbnb.android:lottie:2.7.0'
 }

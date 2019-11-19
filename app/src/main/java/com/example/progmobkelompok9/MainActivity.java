@@ -1,10 +1,10 @@
 package com.example.progmobkelompok9;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.EditText;
 
+import com.example.progmobkelompok9.util.StringFixed;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -13,14 +13,20 @@ import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_CODE = 100;
-    Button save;
-    EditText nama_editText, jurusan_editText;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    Boolean session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        sharedPreferences = getSharedPreferences(StringFixed.KEY_LOGIN,MODE_PRIVATE);
+        session = sharedPreferences.getBoolean(StringFixed.KEY_SESSION,false);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new HomeFragment()).commit();
@@ -38,13 +44,20 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.nav_mybook:
-                            selectedFragment = new MyBookFragment();
-                            break;
-                        case R.id.nav_notification:
-                            selectedFragment = new NotificationFragment();
+                            if (session){
+                                selectedFragment = new MyDocumentFragment();
+                            }
+                            else{
+                                selectedFragment = new NotLoginFragment();
+                            }
                             break;
                         case R.id.nav_profile:
-                            selectedFragment = new ProfileFragment();
+                            if (session){
+                                selectedFragment = new ProfileFragment();
+                            }
+                            else{
+                                selectedFragment = new NotLoginFragment();
+                            }
                             break;
                     }
 

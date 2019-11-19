@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DocumentDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/detail_document_image"
+                android:layout_width="125dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/image_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Judul"
+                app:layout_constraintStart_toEndOf="@+id/detail_document_image"
+                app:layout_constraintTop_toTopOf="@+id/detail_document_image" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_namaDocument" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penulis"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_namaCategory" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penerbit"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_penulis" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tahun Terbit"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_penerbit" />
+
+            <TextView
+                android:id="@+id/detail_document_namaDocument"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Judul"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="@+id/detail_document_namaCategory"
+                app:layout_constraintStart_toStartOf="@+id/detail_document_namaCategory"
+                app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/detail_document_namaCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="@+id/detail_document_penulis"
+                app:layout_constraintStart_toStartOf="@+id/detail_document_penulis"
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/detail_document_penulis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Penulis"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="@+id/detail_document_penerbit"
+                app:layout_constraintStart_toStartOf="@+id/detail_document_penerbit"
+                app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/detail_document_penerbit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Penerbit"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="@+id/detail_document_tahunTerbit"
+                app:layout_constraintStart_toStartOf="@+id/detail_document_tahunTerbit"
+                app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/detail_document_tahunTerbit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Tahun Terbit"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/detail_document_userImage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/avatar"
+                app:layout_constraintStart_toStartOf="@+id/detail_document_image"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_image" />
+
+            <TextView
+                android:id="@+id/detail_document_namaUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Nama User"
+                android:textColor="#000"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_document_userImage"
+                app:layout_constraintStart_toEndOf="@+id/detail_document_userImage"
+                app:layout_constraintTop_toTopOf="@+id/detail_document_userImage"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/document_detail_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/ic_like_nonaktif"
+                app:layout_constraintEnd_toStartOf="@+id/document_detail_dislike"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_userImage" />
+
+            <TextView
+                android:id="@+id/detail_document_likeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                app:layout_constraintEnd_toEndOf="@+id/document_detail_like"
+                app:layout_constraintStart_toStartOf="@+id/document_detail_like"
+                app:layout_constraintTop_toBottomOf="@+id/document_detail_like" />
+
+            <ImageView
+                android:id="@+id/document_detail_dislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_dislike_nonaktif"
+                app:layout_constraintEnd_toStartOf="@+id/document_detail_offline"
+                app:layout_constraintStart_toEndOf="@+id/document_detail_like"
+                app:layout_constraintTop_toTopOf="@+id/document_detail_like" />
+
+            <TextView
+                android:id="@+id/detail_document_dislikeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dislike"
+                app:layout_constraintEnd_toEndOf="@+id/document_detail_dislike"
+                app:layout_constraintStart_toStartOf="@+id/document_detail_dislike"
+                app:layout_constraintTop_toBottomOf="@+id/document_detail_dislike" />
+
+            <ImageView
+                android:id="@+id/document_detail_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_download"
+                app:layout_constraintEnd_toStartOf="@+id/document_detail_read"
+                app:layout_constraintStart_toEndOf="@+id/document_detail_dislike"
+                app:layout_constraintTop_toTopOf="@+id/document_detail_dislike" />
+
+            <TextView
+                android:id="@+id/detail_document_offlineTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offline"
+                app:layout_constraintEnd_toEndOf="@+id/document_detail_offline"
+                app:layout_constraintStart_toStartOf="@+id/document_detail_offline"
+                app:layout_constraintTop_toBottomOf="@+id/document_detail_offline" />
+
+            <ImageView
+                android:id="@+id/document_detail_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_read"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/document_detail_offline"
+                app:layout_constraintTop_toTopOf="@+id/document_detail_offline" />
+
+            <TextView
+                android:id="@+id/detail_document_readTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read"
+                app:layout_constraintEnd_toEndOf="@+id/document_detail_read"
+                app:layout_constraintStart_toStartOf="@+id/document_detail_read"
+                app:layout_constraintTop_toBottomOf="@+id/document_detail_read" />
+
+            <Button
+                android:id="@+id/detail_document_commentButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="2dp"
+                android:background="@color/primary"
+                android:text="Comment"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toStartOf="@+id/detail_document_deskripsiButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_likeTxt" />
+
+            <Button
+                android:id="@+id/detail_document_deskripsiButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@color/primary"
+                android:text="Deskripsi"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/detail_document_commentButton"
+                app:layout_constraintTop_toTopOf="@+id/detail_document_commentButton" />
+
+            <TextView
+                android:id="@+id/detail_document_deskripsi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Deskripsi"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_commentButton" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detail_document_recyclerViewComment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/detail_document_editComment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_commentButton" />
+
+            <EditText
+                android:id="@+id/detail_document_editComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/detail_document_sendButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_document_recyclerViewComment" />
+
+            <Button
+                android:id="@+id/detail_document_sendButton"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/detail_document_editComment" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_document_userImage"
+                app:layout_constraintStart_toStartOf="@+id/detail_document_namaUser"
+                app:layout_constraintTop_toTopOf="@+id/detail_document_userImage"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
