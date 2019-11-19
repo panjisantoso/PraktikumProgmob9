@@ -104,6 +104,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
             public void onClick(View v) {
                 Intent intent=new Intent(context, DocumentDetailActivity.class);
                 intent.putExtra(StringFixed.KEY_ID_DOCUMENT,documentList.get(position).getIdDocument());
+                intent.putExtra(StringFixed.KEY_ID_USER,documentList.get(position).getIdUser());
                 intent.putExtra(StringFixed.KEY_NAMA_USER,documentList.get(position).getNamaUser());
                 intent.putExtra(StringFixed.KEY_NAMA_CATEGORY,documentList.get(position).getNamaCategory());
                 intent.putExtra(StringFixed.KEY_NAMA_DOCUMENT,documentList.get(position).getNamaDocument());

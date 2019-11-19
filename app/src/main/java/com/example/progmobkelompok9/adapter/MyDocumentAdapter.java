@@ -1,6 +1,8 @@
 package com.example.progmobkelompok9.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -72,7 +74,20 @@ public class MyDocumentAdapter extends RecyclerView.Adapter<MyDocumentAdapter.My
         holder.btnHapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                deleteDocument(document.getIdDocument(),position);
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Are you sure?").setMessage("Delete this Document").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        deleteDocument(document.getIdDocument(), position);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).show();
+
             }
         });
 
@@ -111,6 +126,7 @@ public class MyDocumentAdapter extends RecyclerView.Adapter<MyDocumentAdapter.My
             public void onClick(View v) {
                 Intent intent=new Intent(context, DocumentDetailActivity.class);
                 intent.putExtra(StringFixed.KEY_ID_DOCUMENT,documentList.get(position).getIdDocument());
+                intent.putExtra(StringFixed.KEY_ID_USER,documentList.get(position).getIdUser());
                 intent.putExtra(StringFixed.KEY_NAMA_USER,documentList.get(position).getNamaUser());
                 intent.putExtra(StringFixed.KEY_NAMA_CATEGORY,documentList.get(position).getNamaCategory());
                 intent.putExtra(StringFixed.KEY_NAMA_DOCUMENT,documentList.get(position).getNamaDocument());

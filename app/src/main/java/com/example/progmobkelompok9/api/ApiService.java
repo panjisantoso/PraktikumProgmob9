@@ -55,6 +55,7 @@ public interface ApiService {
     @Multipart
     @POST("edit-document")
     Call<ResponseMessage> editDocument(
+            @Part MultipartBody.Part image,
             @Part MultipartBody.Part path,
             @PartMap Map<String,RequestBody> text);
 
@@ -89,4 +90,15 @@ public interface ApiService {
     Call<ResponseMessage> storeComment(@Field("id_user") String idUser,
                          @Field("id_document") String idDocument,
                          @Field("comment") String comment);
+
+    @FormUrlEncoded
+    @POST("store-subscribe")
+    Call<ResponseMessage> storeSubscribe(@Field("id_user") String idUser,
+                     @Field("id_user_subscribe") String idUserSubscribe);
+
+    @GET("get-subscribe")
+    Call<List<User>> getSubscribe(@Query("id_user") String idUser);
+
+    @GET("delete-subscribe")
+    Call<ResponseMessage> deleteSubscribe(@Query("id_subscriber") String idSubscriber);
 }

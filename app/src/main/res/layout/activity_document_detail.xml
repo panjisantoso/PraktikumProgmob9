@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DocumentDetailActivity">
+    tools:context=".DocumentDetailActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -124,8 +126,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/detail_document_userImage"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/avatar"
                 app:layout_constraintStart_toStartOf="@+id/detail_document_image"
@@ -214,6 +216,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Read"
+                android:textColor="#2B2B2B"
                 app:layout_constraintEnd_toEndOf="@+id/document_detail_read"
                 app:layout_constraintStart_toStartOf="@+id/document_detail_read"
                 app:layout_constraintTop_toBottomOf="@+id/document_detail_read" />
@@ -261,6 +264,7 @@
                 android:id="@+id/detail_document_recyclerViewComment"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+
                 app:layout_constraintBottom_toTopOf="@+id/detail_document_editComment"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.6"
@@ -271,7 +275,6 @@
                 android:id="@+id/detail_document_editComment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:focusable="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/detail_document_sendButton"
                 app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +289,7 @@
                 app:layout_constraintTop_toTopOf="@+id/detail_document_editComment" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/document_detail_author"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Author"

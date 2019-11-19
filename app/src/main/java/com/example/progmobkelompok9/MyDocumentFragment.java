@@ -102,8 +102,13 @@ public class MyDocumentFragment extends Fragment {
                     public void onResponse(Call<List<Document>> call, Response<List<Document>> response) {
 //                        Log.e("error bro",response.body().get(0).getDeskripsi().toString());
                         documentList.clear();
-                        documentList.addAll(response.body());
-                        setRecycler();
+                        try {
+                            documentList.addAll(response.body());
+                            setRecycler();
+                        }
+                        catch (Exception e){
+                            Log.e("error",e.getMessage());
+                        }
                     }
 
                     @Override

@@ -24,11 +24,13 @@ public class User {
     private String statusAktif;
     @SerializedName("fcm_token")
     private String fcmToken;
+    @SerializedName("id_subscriber")
+    private String idSubscriber;
 
     public User() {
     }
 
-    public User(String idUser, String namaUser, String image, String tglLahir, String alamat, String username, String password, String tipeUser, String statusAktif, String fcmToken) {
+    public User(String idUser, String namaUser, String image, String tglLahir, String alamat, String username, String password, String tipeUser, String statusAktif, String fcmToken, String idSubscriber) {
         this.idUser = idUser;
         this.namaUser = namaUser;
         this.image = image;
@@ -39,6 +41,15 @@ public class User {
         this.tipeUser = tipeUser;
         this.statusAktif = statusAktif;
         this.fcmToken = fcmToken;
+        this.idSubscriber = idSubscriber;
+    }
+
+    public String getIdSubscriber() {
+        return idSubscriber;
+    }
+
+    public void setIdSubscriber(String idSubscriber) {
+        this.idSubscriber = idSubscriber;
     }
 
     public String getIdUser() {

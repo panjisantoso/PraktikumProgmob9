@@ -183,8 +183,6 @@ public class AddDocumentActivity extends AppCompatActivity {
 
     }
 
-
-
     private void spinnerTypeFile(){
         ArrayList<String> label = new ArrayList<>();
 

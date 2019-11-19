@@ -29,7 +29,9 @@
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.progmobkelompok9.UpdateDocumentActivity" />
         <activity android:name="com.example.progmobkelompok9.AddDocumentActivity" />
-        <activity android:name="com.example.progmobkelompok9.DocumentDetailActivity" />
+        <activity
+            android:name="com.example.progmobkelompok9.DocumentDetailActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.example.progmobkelompok9.CategoryDetailActivity" />
         <activity android:name="com.example.progmobkelompok9.OfflineDocumentActivity" />
         <activity android:name="com.example.progmobkelompok9.MySubscribeActivity" />

@@ -20,7 +20,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".UpdateDocumentActivity"></activity>
         <activity android:name=".AddDocumentActivity" />
-        <activity android:name=".DocumentDetailActivity" />
+        <activity
+            android:name=".DocumentDetailActivity"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".CategoryDetailActivity" />
         <activity android:name=".OfflineDocumentActivity" />
         <activity android:name=".MySubscribeActivity" />
