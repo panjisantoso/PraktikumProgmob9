@@ -134,7 +134,7 @@ public class DocumentDetailActivity extends AppCompatActivity {
                     .enqueue(new Callback<List<Like>>() {
                         @Override
                         public void onResponse(Call<List<Like>> call, Response<List<Like>> response) {
-                            if (!response.body().isEmpty()) {
+                            if (response.body() != null && !response.body().isEmpty()) {
                                 for (int i=0;i<response.body().size();i++){
                                     if (response.body().get(i).getIdDocument().equals(idDocument)){
                                         if (response.body().get(i).getStatusLike().equals("1")){
