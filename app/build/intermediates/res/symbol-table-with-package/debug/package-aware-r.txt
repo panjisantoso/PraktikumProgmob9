@@ -2064,6 +2064,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id document_detail_author
 id document_detail_dislike
 id document_detail_like
 id document_detail_offline
@@ -2134,6 +2135,10 @@ id item_document_offline
 id item_document_offlineTxt
 id item_document_read
 id item_document_readTxt
+id item_subscriber_cardView
+id item_subscriber_delete
+id item_subscriber_image
+id item_subscriber_nama
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
@@ -2141,6 +2146,7 @@ id left
 id line1
 id line3
 id listMode
+id listViewUser
 id list_item
 id lottie_layer_name
 id masked
@@ -2224,6 +2230,8 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id my_subscribe_progressBar
+id my_subscribe_recyclerView
 id mybook_appBarLayout
 id mydocument_floatingActionButtonadd
 id mydocument_recyclerview
@@ -2475,6 +2483,7 @@ layout activity_login
 layout activity_main
 layout activity_my_subscribe
 layout activity_offline_document
+layout activity_offline_document_detail
 layout activity_register
 layout activity_tentang_aplikasi
 layout activity_update_document
@@ -2500,6 +2509,7 @@ layout fragment_not_login
 layout fragment_profile
 layout item_comment
 layout item_document
+layout item_subscriber
 layout material_drawer
 layout material_drawer_compact_header
 layout material_drawer_fits_not

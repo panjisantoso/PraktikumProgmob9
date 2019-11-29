@@ -24,7 +24,8 @@
             android:name=".DocumentDetailActivity"
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".CategoryDetailActivity" />
-        <activity android:name=".OfflineDocumentActivity" />
+        <activity android:name=".OfflineDocumentActivity"
+            android:label=""/>
         <activity android:name=".MySubscribeActivity" />
         <activity android:name=".MyHistoryActivity" />
         <activity android:name=".TentangAplikasiActivity" />
@@ -46,6 +47,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OfflineDocumentDetailActivity"
+            android:label=""/>
 
         <meta-data
             android:name="preloaded_fonts"

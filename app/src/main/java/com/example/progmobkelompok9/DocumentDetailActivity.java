@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -30,6 +32,7 @@ import com.example.progmobkelompok9.model.Auth;
 import com.example.progmobkelompok9.model.Comment;
 import com.example.progmobkelompok9.model.Like;
 import com.example.progmobkelompok9.model.ResponseMessage;
+import com.example.progmobkelompok9.offlineSQLite.DBHelper;
 import com.example.progmobkelompok9.util.StringFixed;
 
 import java.util.ArrayList;
@@ -56,6 +59,10 @@ public class DocumentDetailActivity extends AppCompatActivity {
     Boolean session;
     List<Comment> commentList = new ArrayList<>();
     CommentAdapter adapter;
+
+    //SQLite
+    DBHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +71,7 @@ public class DocumentDetailActivity extends AppCompatActivity {
         ab.setTitle("Document Detail");
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowHomeEnabled(true);
-
+        dbHelper = new DBHelper(this);
         sharedPreferences = getSharedPreferences(StringFixed.KEY_LOGIN,MODE_PRIVATE);
         idUser = sharedPreferences.getString(StringFixed.KEY_ID_USER,"");
         session = sharedPreferences.getBoolean(StringFixed.KEY_SESSION,false);
@@ -139,6 +146,44 @@ public class DocumentDetailActivity extends AppCompatActivity {
 
         getComment();
 
+        mOffline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mPath = BuildConfig.BASE_URL_DOCUMENT + path;
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                db.execSQL("INSERT INTO document(judul, category, penulis, penerbit, tahun_terbit, nama_user, deskripsi, " +
+                        "path, tgl_upload, status_aktif, " +
+                        "id_user" +
+                        ") VALUES('" +
+                        mNama.getText().toString() + "','" +
+                        mCategory.getText().toString() + "','" +
+                        mPenulis.getText().toString() + "','" +
+                        mPenerbit.getText().toString() + "','" +
+                        mThnTerbit.getText().toString() + "','" +
+                        mNamaUser.getText().toString() +  "','" +
+                        mDeskripsi.getText().toString() + "','" +
+                        path + "','" +
+                        tglUpload + "','" +
+                        statusAktif + "','" +
+                        idUser +
+                        "')");
+
+                Toast.makeText(getApplicationContext(), "Download Document Success", Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
+
+        mRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String url = BuildConfig.BASE_URL_DOCUMENT + path;
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
         mSendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -190,12 +235,12 @@ public class DocumentDetailActivity extends AppCompatActivity {
                                 });
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
-                    }
-                }).show();
+                            }
+                        }).show();
             }
         }
         else{

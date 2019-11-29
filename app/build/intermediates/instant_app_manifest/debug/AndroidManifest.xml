@@ -33,7 +33,9 @@
             android:name="com.example.progmobkelompok9.DocumentDetailActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.example.progmobkelompok9.CategoryDetailActivity" />
-        <activity android:name="com.example.progmobkelompok9.OfflineDocumentActivity" />
+        <activity
+            android:name="com.example.progmobkelompok9.OfflineDocumentActivity"
+            android:label="" />
         <activity android:name="com.example.progmobkelompok9.MySubscribeActivity" />
         <activity android:name="com.example.progmobkelompok9.MyHistoryActivity" />
         <activity android:name="com.example.progmobkelompok9.TentangAplikasiActivity" />
@@ -55,6 +57,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.progmobkelompok9.OfflineDocumentDetailActivity"
+            android:label="" />
 
         <meta-data
             android:name="preloaded_fonts"

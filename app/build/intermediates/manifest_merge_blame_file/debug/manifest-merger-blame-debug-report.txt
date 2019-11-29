@@ -7,113 +7,122 @@
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
-9-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml
+9-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml
 10        android:targetSdkVersion="28" />
-10-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml
+10-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml
 11
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:7:5-66
-12-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:7:22-64
+12-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:7:5-66
+12-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:7:22-64
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-13-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:8:5-79
-13-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:8:22-77
+13-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:8:5-79
+13-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:8:22-77
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:9:5-80
-14-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:9:22-78
+14-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:9:5-80
+14-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:9:22-78
 15
 16    <dist:module dist:instant="true" />
-16-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:11:5-40
-16-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:11:18-37
+16-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:11:5-40
+16-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:11:18-37
 17
 18    <application
-18-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:13:5-53:19
+18-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:13:5-56:19
 19        android:allowBackup="true"
-19-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:14:9-35
+19-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:14:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
+20-->[androidx.core:core:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
 22        android:icon="@mipmap/ic_launcher"
-22-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:15:9-43
+22-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:15:9-43
 23        android:label="@string/app_name"
-23-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:16:9-41
+23-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:16:9-41
 24        android:networkSecurityConfig="@xml/network_security_config"
-24-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:19:9-69
+24-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:19:9-69
 25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:17:9-54
+25-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:17:9-54
 26        android:supportsRtl="true"
-26-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:18:9-35
+26-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:18:9-35
 27        android:testOnly="true"
 28        android:theme="@style/AppTheme" >
-28-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:20:9-40
+28-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:20:9-40
 29        <activity android:name="com.example.progmobkelompok9.UpdateDocumentActivity" />
-29-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:21:9-69
-29-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:21:19-57
+29-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:21:9-69
+29-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:21:19-57
 30        <activity android:name="com.example.progmobkelompok9.AddDocumentActivity" />
-30-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:22:9-57
-30-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:22:19-54
+30-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:22:9-57
+30-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:22:19-54
 31        <activity
-31-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:23:9-25:54
+31-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:23:9-25:54
 32            android:name="com.example.progmobkelompok9.DocumentDetailActivity"
-32-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:24:13-51
+32-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:24:13-51
 33            android:windowSoftInputMode="adjustPan" />
-33-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:25:13-52
+33-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:25:13-52
 34        <activity android:name="com.example.progmobkelompok9.CategoryDetailActivity" />
-34-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:26:9-60
-34-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:26:19-57
-35        <activity android:name="com.example.progmobkelompok9.OfflineDocumentActivity" />
-35-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:27:9-61
-35-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:27:19-58
-36        <activity android:name="com.example.progmobkelompok9.MySubscribeActivity" />
-36-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:28:9-57
-36-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:28:19-54
-37        <activity android:name="com.example.progmobkelompok9.MyHistoryActivity" />
-37-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:29:9-55
-37-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:29:19-52
-38        <activity android:name="com.example.progmobkelompok9.TentangAplikasiActivity" />
-38-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:30:9-61
-38-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:30:19-58
-39        <activity
-39-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:31:9-34:59
-40            android:name="com.example.progmobkelompok9.LoginActivity"
-40-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:32:13-42
-41            android:label="@string/app_name"
-41-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:33:13-45
-42            android:theme="@style/AppTheme.NoActionBar" />
-42-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:34:13-56
-43        <activity
-43-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:35:9-38:59
-44            android:name="com.example.progmobkelompok9.RegisterActivity"
-44-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:36:13-45
-45            android:label="@string/app_name"
-45-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:37:13-45
-46            android:theme="@style/AppTheme.NoActionBar" />
-46-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:38:13-56
-47        <activity
-47-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:39:9-48:20
-48            android:name="com.example.progmobkelompok9.MainActivity"
-48-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:40:13-41
-49            android:label="Home Screen"
-49-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:41:13-40
-50            android:theme="@style/AppTheme.NoActionBar" >
-50-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:42:13-56
-51            <intent-filter>
-51-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:43:13-47:29
-52                <action android:name="android.intent.action.MAIN" />
-52-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:44:17-69
-52-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:44:25-66
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:46:17-77
-54-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:46:27-74
-55            </intent-filter>
-56        </activity>
-57
-58        <meta-data
-58-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:50:9-52:57
-59            android:name="preloaded_fonts"
-59-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:51:13-43
-60            android:resource="@array/preloaded_fonts" />
-60-->D:\mine\android\tugas_kuliah\PraktikumProgmob9\app\src\main\AndroidManifest.xml:52:13-54
-61    </application>
+34-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:26:9-60
+34-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:26:19-57
+35        <activity
+35-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:27:9-28:31
+36            android:name="com.example.progmobkelompok9.OfflineDocumentActivity"
+36-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:27:19-58
+37            android:label="" />
+37-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:28:13-29
+38        <activity android:name="com.example.progmobkelompok9.MySubscribeActivity" />
+38-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:29:9-57
+38-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:29:19-54
+39        <activity android:name="com.example.progmobkelompok9.MyHistoryActivity" />
+39-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:30:9-55
+39-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:30:19-52
+40        <activity android:name="com.example.progmobkelompok9.TentangAplikasiActivity" />
+40-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:31:9-61
+40-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:31:19-58
+41        <activity
+41-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:32:9-35:59
+42            android:name="com.example.progmobkelompok9.LoginActivity"
+42-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:33:13-42
+43            android:label="@string/app_name"
+43-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:34:13-45
+44            android:theme="@style/AppTheme.NoActionBar" />
+44-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:35:13-56
+45        <activity
+45-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:36:9-39:59
+46            android:name="com.example.progmobkelompok9.RegisterActivity"
+46-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:37:13-45
+47            android:label="@string/app_name"
+47-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:38:13-45
+48            android:theme="@style/AppTheme.NoActionBar" />
+48-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:39:13-56
+49        <activity
+49-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:40:9-49:20
+50            android:name="com.example.progmobkelompok9.MainActivity"
+50-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:41:13-41
+51            android:label="Home Screen"
+51-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:42:13-40
+52            android:theme="@style/AppTheme.NoActionBar" >
+52-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:43:13-56
+53            <intent-filter>
+53-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:44:13-48:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:45:17-69
+54-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:45:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:47:17-77
+56-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:47:27-74
+57            </intent-filter>
+58        </activity>
+59        <activity
+59-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:50:9-51:31
+60            android:name="com.example.progmobkelompok9.OfflineDocumentDetailActivity"
+60-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:50:19-64
+61            android:label="" />
+61-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:51:13-29
 62
-63</manifest>
+63        <meta-data
+63-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:53:9-55:57
+64            android:name="preloaded_fonts"
+64-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:54:13-43
+65            android:resource="@array/preloaded_fonts" />
+65-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:55:13-54
+66    </application>
+67
+68</manifest>
