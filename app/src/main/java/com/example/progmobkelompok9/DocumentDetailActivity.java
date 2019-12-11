@@ -169,18 +169,14 @@ public class DocumentDetailActivity extends AppCompatActivity {
                         "')");
 
                 Toast.makeText(getApplicationContext(), "Download Document Success", Toast.LENGTH_LONG).show();
-                finish();
+//                finish();
             }
         });
 
         mRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String url = BuildConfig.BASE_URL_DOCUMENT + path;
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+                seeDocumentstoreHistory();
             }
         });
 
@@ -205,6 +201,34 @@ public class DocumentDetailActivity extends AppCompatActivity {
                 subscriber();
             }
         });
+    }
+
+    private void seeDocumentstoreHistory(){
+        if (session){
+            String url = BuildConfig.BASE_URL_DOCUMENT + path
+                    ;
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
+
+            ApiClient.getClient()
+                    .create(ApiService.class)
+                    .storeHistory(idUser,idDocument)
+                    .enqueue(new Callback<ResponseMessage>() {
+                        @Override
+                        public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
+                            Log.e("simpan history","berhasil");
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseMessage> call, Throwable t) {
+                            Log.e("error",t.getMessage());
+                        }
+                    });
+        }
+        else{
+            Toast.makeText(this,"you need to login to see this document",Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void subscriber(){

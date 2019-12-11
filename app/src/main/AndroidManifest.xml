@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.example.progmobkelompok9"
-    >
+    package="com.example.progmobkelompok9">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
     <dist:module dist:instant="true" />
 
@@ -14,21 +14,28 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateDocumentActivity"></activity>
+
+
+        <activity android:name=".UpdateDocumentActivity" />
         <activity android:name=".AddDocumentActivity" />
         <activity
             android:name=".DocumentDetailActivity"
-            android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".CategoryDetailActivity" />
-        <activity android:name=".OfflineDocumentActivity"
-            android:label=""/>
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".CategoryDetailActivity" />
+        <activity
+            android:name=".OfflineDocumentActivity"
+            android:label="" />
         <activity android:name=".MySubscribeActivity" />
         <activity android:name=".MyHistoryActivity" />
-        <activity android:name=".TentangAplikasiActivity" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".TentangAplikasiActivity" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name"
@@ -47,12 +54,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OfflineDocumentDetailActivity"
-            android:label=""/>
+        <activity
+            android:name=".OfflineDocumentDetailActivity"
+            android:label="" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.LikeService" />
+
     </application>
 
 </manifest>

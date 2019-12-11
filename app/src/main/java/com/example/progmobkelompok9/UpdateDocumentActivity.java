@@ -33,6 +33,7 @@ import com.example.progmobkelompok9.util.DateFormat;
 import com.example.progmobkelompok9.util.FileHelper;
 import com.example.progmobkelompok9.util.PermissionHelper;
 import com.example.progmobkelompok9.util.StringFixed;
+import com.whiteelephant.monthpicker.MonthPickerDialog;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -354,27 +355,30 @@ public class UpdateDocumentActivity extends AppCompatActivity {
     }
 
     private void getDate(){
-        final Calendar myCalendar = Calendar.getInstance();
-        final DateFormat dateFormat = new DateFormat();
-        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+        final Calendar today = Calendar.getInstance();
 
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                // TODO Auto-generated method stub
-                myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH, monthOfYear);
-                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        MonthPickerDialog.Builder builder = new MonthPickerDialog.Builder(UpdateDocumentActivity.this,
+                new MonthPickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(int selectedMonth, int selectedYear) {
+                        // on date set }
+                    }
 
-                mThnTerbit.setText(dateFormat.IDN(myCalendar));
-                thnTerbit = dateFormat.IDN(myCalendar);
-            }
-        };
+                },today.get(Calendar.YEAR),today.get(Calendar.MONTH));
 
-        new DatePickerDialog(UpdateDocumentActivity.this, date, myCalendar
-                .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-
+        builder.setMinYear(1990)
+                .setActivatedYear(Integer.parseInt(thnTerbit))
+                .setMaxYear(2099)
+                .showYearOnly()
+                .setOnYearChangedListener(new MonthPickerDialog.OnYearChangedListener() {
+                    @Override
+                    public void onYearChanged(int selectedYear) { // on year selected
+                        thnTerbit = Integer.toString(selectedYear);
+                        mThnTerbit.setText(String.valueOf(selectedYear));
+                    }
+                })
+                .build()
+                .show();
     }
 
     @Override

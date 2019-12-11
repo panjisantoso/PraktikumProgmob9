@@ -6,123 +6,316 @@
 6    android:versionName="1.0" >
 7
 8    <uses-sdk
-9        android:minSdkVersion="19"
-9-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml
+9        android:minSdkVersion="23"
+9-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml
 10        android:targetSdkVersion="28" />
-10-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml
+10-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml
 11
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:7:5-66
-12-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:7:22-64
+12-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:6:5-67
+12-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:6:22-64
 13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-13-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:8:5-79
-13-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:8:22-77
+13-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:7:5-80
+13-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:7:22-77
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:9:5-80
-14-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:9:22-78
-15
-16    <dist:module dist:instant="true" />
-16-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:11:5-40
-16-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:11:18-37
-17
-18    <application
-18-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:13:5-56:19
-19        android:allowBackup="true"
-19-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:14:9-35
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.1.0] C:\Users\Asus\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
-21        android:debuggable="true"
-22        android:icon="@mipmap/ic_launcher"
-22-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:15:9-43
-23        android:label="@string/app_name"
-23-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:16:9-41
-24        android:networkSecurityConfig="@xml/network_security_config"
-24-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:19:9-69
-25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:17:9-54
-26        android:supportsRtl="true"
-26-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:18:9-35
-27        android:testOnly="true"
-28        android:theme="@style/AppTheme" >
-28-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:20:9-40
-29        <activity android:name="com.example.progmobkelompok9.UpdateDocumentActivity" />
-29-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:21:9-69
-29-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:21:19-57
-30        <activity android:name="com.example.progmobkelompok9.AddDocumentActivity" />
-30-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:22:9-57
-30-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:22:19-54
-31        <activity
-31-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:23:9-25:54
-32            android:name="com.example.progmobkelompok9.DocumentDetailActivity"
-32-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:24:13-51
-33            android:windowSoftInputMode="adjustPan" />
-33-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:25:13-52
-34        <activity android:name="com.example.progmobkelompok9.CategoryDetailActivity" />
-34-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:26:9-60
-34-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:26:19-57
-35        <activity
-35-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:27:9-28:31
-36            android:name="com.example.progmobkelompok9.OfflineDocumentActivity"
-36-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:27:19-58
-37            android:label="" />
-37-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:28:13-29
-38        <activity android:name="com.example.progmobkelompok9.MySubscribeActivity" />
-38-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:29:9-57
-38-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:29:19-54
-39        <activity android:name="com.example.progmobkelompok9.MyHistoryActivity" />
-39-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:30:9-55
-39-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:30:19-52
-40        <activity android:name="com.example.progmobkelompok9.TentangAplikasiActivity" />
-40-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:31:9-61
-40-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:31:19-58
-41        <activity
-41-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:32:9-35:59
-42            android:name="com.example.progmobkelompok9.LoginActivity"
-42-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:33:13-42
-43            android:label="@string/app_name"
-43-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:34:13-45
-44            android:theme="@style/AppTheme.NoActionBar" />
-44-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:35:13-56
-45        <activity
-45-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:36:9-39:59
-46            android:name="com.example.progmobkelompok9.RegisterActivity"
-46-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:37:13-45
-47            android:label="@string/app_name"
-47-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:38:13-45
-48            android:theme="@style/AppTheme.NoActionBar" />
-48-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:39:13-56
-49        <activity
-49-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:40:9-49:20
-50            android:name="com.example.progmobkelompok9.MainActivity"
-50-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:41:13-41
-51            android:label="Home Screen"
-51-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:42:13-40
-52            android:theme="@style/AppTheme.NoActionBar" >
-52-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:43:13-56
-53            <intent-filter>
-53-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:44:13-48:29
-54                <action android:name="android.intent.action.MAIN" />
-54-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:45:17-69
-54-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:45:25-66
-55
-56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:47:17-77
-56-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:47:27-74
-57            </intent-filter>
-58        </activity>
-59        <activity
-59-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:50:9-51:31
-60            android:name="com.example.progmobkelompok9.OfflineDocumentDetailActivity"
-60-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:50:19-64
-61            android:label="" />
-61-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:51:13-29
-62
-63        <meta-data
-63-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:53:9-55:57
-64            android:name="preloaded_fonts"
-64-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:54:13-43
-65            android:resource="@array/preloaded_fonts" />
-65-->C:\Users\Asus\AndroidStudioProjects\PraktikumProgmob9\app\src\main\AndroidManifest.xml:55:13-54
-66    </application>
-67
-68</manifest>
+14-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:8:5-81
+14-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+15-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:9:5-82
+15-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:9:22-79
+16
+17    <dist:module dist:instant="true" />
+17-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:11:5-40
+17-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:11:18-37
+18
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:23:5-79
+19-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:23:22-76
+20    <uses-permission android:name="android.permission.WAKE_LOCK" />
+20-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:24:5-68
+20-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:24:22-65
+21    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+21-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:26:5-110
+21-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:26:22-107
+22
+23    <application
+23-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:13:5-76:19
+24        android:allowBackup="true"
+24-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:14:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.2.0-rc01] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\5188d1258a6f3da67f7e8ce1b5568a5f\core-1.2.0-rc01\AndroidManifest.xml:24:18-86
+26        android:debuggable="true"
+27        android:icon="@mipmap/ic_launcher"
+27-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:15:9-43
+28        android:label="@string/app_name"
+28-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:16:9-41
+29        android:networkSecurityConfig="@xml/network_security_config"
+29-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:17:9-69
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:18:9-54
+31        android:supportsRtl="true"
+31-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:19:9-35
+32        android:testOnly="true"
+33        android:theme="@style/AppTheme" >
+33-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:20:9-40
+34        <activity android:name="com.example.progmobkelompok9.UpdateDocumentActivity" />
+34-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:23:9-60
+34-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:23:19-57
+35        <activity android:name="com.example.progmobkelompok9.AddDocumentActivity" />
+35-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:24:9-57
+35-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:24:19-54
+36        <activity
+36-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:25:9-27:55
+37            android:name="com.example.progmobkelompok9.DocumentDetailActivity"
+37-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:26:13-51
+38            android:windowSoftInputMode="adjustPan" />
+38-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:27:13-52
+39        <activity
+39-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:28:9-30:54
+40            android:name="com.example.progmobkelompok9.CategoryDetailActivity"
+40-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:30:13-51
+41            android:theme="@style/AppTheme.NoActionBar" />
+41-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:29:13-56
+42        <activity
+42-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:31:9-33:32
+43            android:name="com.example.progmobkelompok9.OfflineDocumentActivity"
+43-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:32:13-52
+44            android:label="" />
+44-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:33:13-29
+45        <activity android:name="com.example.progmobkelompok9.MySubscribeActivity" />
+45-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:34:9-57
+45-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:34:19-54
+46        <activity android:name="com.example.progmobkelompok9.MyHistoryActivity" />
+46-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:35:9-55
+46-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:35:19-52
+47        <activity
+47-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:36:9-38:55
+48            android:name="com.example.progmobkelompok9.TentangAplikasiActivity"
+48-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:38:13-52
+49            android:theme="@style/AppTheme.NoActionBar" />
+49-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:37:13-56
+50        <activity
+50-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:39:9-42:59
+51            android:name="com.example.progmobkelompok9.LoginActivity"
+51-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:40:13-42
+52            android:label="@string/app_name"
+52-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:41:13-45
+53            android:theme="@style/AppTheme.NoActionBar" />
+53-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:42:13-56
+54        <activity
+54-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:43:9-46:59
+55            android:name="com.example.progmobkelompok9.RegisterActivity"
+55-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:44:13-45
+56            android:label="@string/app_name"
+56-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:45:13-45
+57            android:theme="@style/AppTheme.NoActionBar" />
+57-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:46:13-56
+58        <activity
+58-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:47:9-56:20
+59            android:name="com.example.progmobkelompok9.MainActivity"
+59-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:48:13-41
+60            android:label="Home Screen"
+60-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:49:13-40
+61            android:theme="@style/AppTheme.NoActionBar" >
+61-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:50:13-56
+62            <intent-filter>
+62-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:51:13-55:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:52:17-69
+63-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:52:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:54:17-77
+65-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:54:27-74
+66            </intent-filter>
+67        </activity>
+68        <activity
+68-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:57:9-59:32
+69            android:name="com.example.progmobkelompok9.OfflineDocumentDetailActivity"
+69-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:58:13-58
+70            android:label="" />
+70-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:59:13-29
+71
+72        <meta-data
+72-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:61:9-63:57
+73            android:name="preloaded_fonts"
+73-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:62:13-43
+74            android:resource="@array/preloaded_fonts" />
+74-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:63:13-54
+75
+76        <service
+76-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:65:9-72:19
+77            android:name="com.example.progmobkelompok9.service.MyFirebaseMessagingService"
+77-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:66:13-63
+78            android:permission="com.google.android.c2dm.permission.SEND" >
+78-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:67:13-73
+79            <intent-filter>
+79-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:68:13-71:29
+80                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+80-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:69:17-78
+80-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:69:25-75
+81                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+81-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:70:17-81
+81-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:70:25-78
+82            </intent-filter>
+83        </service>
+84        <service android:name="com.example.progmobkelompok9.service.LikeService" />
+84-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:74:9-56
+84-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:74:18-53
+85
+86        <!--
+87             FirebaseMessagingService performs security checks at runtime,
+88             no need for explicit permissions despite exported="true"
+89        -->
+90        <service
+90-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\93664757612e0e29a009b83759407dac\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:28:9-34:19
+91            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+91-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\93664757612e0e29a009b83759407dac\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:29:13-82
+92            android:exported="true" >
+92-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\93664757612e0e29a009b83759407dac\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:30:13-36
+93            <intent-filter android:priority="-500" >
+93-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\93664757612e0e29a009b83759407dac\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:31:13-33:29
+93-->[com.google.firebase:firebase-messaging:17.3.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\93664757612e0e29a009b83759407dac\jetified-firebase-messaging-17.3.4\AndroidManifest.xml:31:28-51
+94                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+94-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:69:17-78
+94-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:69:25-75
+95            </intent-filter>
+96        </service>
+97        <service
+97-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:27:9-31:19
+98            android:name="com.google.firebase.components.ComponentDiscoveryService"
+98-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:27:18-89
+99            android:exported="false" >
+99-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:31:13-37
+100            <meta-data
+100-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:28:13-30:85
+101                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+101-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:29:17-139
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-measurement-connector-impl:17.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6faed25103b8cc786cda01a225aa70f0\jetified-firebase-measurement-connector-impl-17.0.2\AndroidManifest.xml:30:17-82
+103            <meta-data
+103-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:32:13-34:85
+104                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+104-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:33:17-96
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:34:17-82
+106        </service>
+107
+108        <receiver
+108-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:29:9-33:20
+109            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+109-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:30:13-85
+110            android:enabled="true"
+110-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:31:13-35
+111            android:exported="false" >
+111-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:32:13-37
+112        </receiver>
+113        <receiver
+113-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:34:9-42:20
+114            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+114-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:35:13-100
+115            android:enabled="true"
+115-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:36:13-35
+116            android:exported="true"
+116-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:37:13-36
+117            android:permission="android.permission.INSTALL_PACKAGES" >
+117-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:38:13-69
+118            <intent-filter>
+118-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:39:13-41:29
+119                <action android:name="com.android.vending.INSTALL_REFERRER" />
+119-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:40:17-79
+119-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:40:25-76
+120            </intent-filter>
+121        </receiver>
+122
+123        <service
+123-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:44:9-47:40
+124            android:name="com.google.android.gms.measurement.AppMeasurementService"
+124-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:45:13-84
+125            android:enabled="true"
+125-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:46:13-35
+126            android:exported="false" />
+126-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:47:13-37
+127        <service
+127-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:48:9-52:72
+128            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+128-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:49:13-87
+129            android:enabled="true"
+129-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:50:13-35
+130            android:exported="false"
+130-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:51:13-37
+131            android:permission="android.permission.BIND_JOB_SERVICE" />
+131-->[com.google.firebase:firebase-analytics:16.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\802625ac783be1157d3b8186de10ed4b\jetified-firebase-analytics-16.0.4\AndroidManifest.xml:52:13-69
+132
+133        <receiver
+133-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:37:9-44:20
+134            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+134-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:38:13-78
+135            android:exported="true"
+135-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:39:13-36
+136            android:permission="com.google.android.c2dm.permission.SEND" >
+136-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:40:13-73
+137            <intent-filter>
+137-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:41:13-43:29
+138                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+138-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:70:17-81
+138-->D:\mine\android\tugas_kuliah\PraktikumProgmob91\app\src\main\AndroidManifest.xml:70:25-78
+139            </intent-filter>
+140        </receiver>
+141        <!--
+142             FirebaseInstanceIdService performs security checks at runtime,
+143             no need for explicit permissions despite exported="true"
+144        -->
+145        <service
+145-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:50:9-56:19
+146            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+146-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:51:13-77
+147            android:exported="true" >
+147-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:52:13-36
+148            <intent-filter android:priority="-500" >
+148-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:53:13-55:29
+148-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:53:28-51
+149                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+149-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:54:17-80
+149-->[com.google.firebase:firebase-iid:17.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8c1977c4bc1bc10e00472cbf878e0f83\jetified-firebase-iid-17.0.4\AndroidManifest.xml:54:25-77
+150            </intent-filter>
+151        </service>
+152
+153        <provider
+153-->[com.google.firebase:firebase-common:16.0.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\fd40ff2e4899e9a349940a3bebdfc99f\jetified-firebase-common-16.0.3\AndroidManifest.xml:10:9-14:39
+154            android:name="com.google.firebase.provider.FirebaseInitProvider"
+154-->[com.google.firebase:firebase-common:16.0.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\fd40ff2e4899e9a349940a3bebdfc99f\jetified-firebase-common-16.0.3\AndroidManifest.xml:11:13-77
+155            android:authorities="com.example.progmobkelompok9.firebaseinitprovider"
+155-->[com.google.firebase:firebase-common:16.0.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\fd40ff2e4899e9a349940a3bebdfc99f\jetified-firebase-common-16.0.3\AndroidManifest.xml:12:13-72
+156            android:exported="false"
+156-->[com.google.firebase:firebase-common:16.0.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\fd40ff2e4899e9a349940a3bebdfc99f\jetified-firebase-common-16.0.3\AndroidManifest.xml:13:13-37
+157            android:initOrder="100" />
+157-->[com.google.firebase:firebase-common:16.0.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\fd40ff2e4899e9a349940a3bebdfc99f\jetified-firebase-common-16.0.3\AndroidManifest.xml:14:13-36
+158
+159        <activity
+159-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\e503b4d2d4f30d7b79f8f999a7412204\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+160            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+160-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\e503b4d2d4f30d7b79f8f999a7412204\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+161            android:exported="false"
+161-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\e503b4d2d4f30d7b79f8f999a7412204\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+162            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+162-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\e503b4d2d4f30d7b79f8f999a7412204\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+163
+164        <meta-data
+164-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8097c5634fa2d793639d7b192d92853d\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+165            android:name="com.google.android.gms.version"
+165-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8097c5634fa2d793639d7b192d92853d\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+166            android:value="@integer/google_play_services_version" />
+166-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\8097c5634fa2d793639d7b192d92853d\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+167
+168        <provider
+168-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\be4afef3740ae17ee38d679d4c089a4e\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+169            android:name="com.squareup.picasso.PicassoProvider"
+169-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\be4afef3740ae17ee38d679d4c089a4e\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+170            android:authorities="com.example.progmobkelompok9.com.squareup.picasso"
+170-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\be4afef3740ae17ee38d679d4c089a4e\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+171            android:exported="false" />
+171-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\be4afef3740ae17ee38d679d4c089a4e\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+172    </application>
+173
+174</manifest>

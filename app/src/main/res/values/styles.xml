@@ -15,6 +15,29 @@
         <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
     </style>
 
+    <style name="CustomActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="MonthPickerDialogStyle" >
+        <item name="monthBgColor">#fff</item>
+        <item name="monthBgSelectedColor">@color/colorAccent</item>
+        <item name="monthFontColorSelected">@color/primary</item>
+        <item name="monthFontColorNormal">@color/primary</item>
+        <item name="monthFontColorDisabled">@color/primary</item>
+
+        <item name="headerBgColor">@color/colorAccent</item>
+        <item name="headerFontColorSelected">#fff</item>
+        <item name="headerFontColorNormal">#85FFFFFF</item>
+        <item name="headerTitleColor">#fff</item>
+
+        <item name="dialogActionButtonColor">@color/colorAccent</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

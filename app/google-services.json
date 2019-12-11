@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "497510011026",
+    "firebase_url": "https://progmobkelompok9.firebaseio.com",
+    "project_id": "progmobkelompok9",
+    "storage_bucket": "progmobkelompok9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497510011026:android:aadd58792db4ab44ab164b",
+        "android_client_info": {
+          "package_name": "com.example.progmobkelompok9"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497510011026-hk889apijhboagjqk0s912fco3ffu76k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.progmobkelompok9",
+            "certificate_hash": "4b97c027923cf247a06e3044404d8e6aa2347a63"
+          }
+        },
+        {
+          "client_id": "497510011026-racpsnfgd8nam2mbnh5e702ffr081dnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1cflC54pWuiP611y6cib6g2HuZxTewk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497510011026-racpsnfgd8nam2mbnh5e702ffr081dnr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,4 +6,8 @@
 
     <color name="colorPrimaryText">#000</color>
     <color name="gray">#C9C9C9</color>
+    <color name="transparent">#00FAFAFA</color>
+    <color name="black_transparent">#AF000000</color>
+    <color name="more_black_transparent">#66000000</color>
+    <color name="gray_darker">#A9A9A9</color>
 </resources>

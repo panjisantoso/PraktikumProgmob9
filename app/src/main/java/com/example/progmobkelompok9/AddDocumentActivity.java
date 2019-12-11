@@ -41,6 +41,7 @@ import com.example.progmobkelompok9.util.DateFormat;
 import com.example.progmobkelompok9.util.FileHelper;
 import com.example.progmobkelompok9.util.PermissionHelper;
 import com.example.progmobkelompok9.util.StringFixed;
+import com.whiteelephant.monthpicker.MonthPickerDialog;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -127,7 +128,7 @@ public class AddDocumentActivity extends AppCompatActivity {
         mThnTerbit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createDialogWithoutDateField().show();
+                createDialogWithoutDateField();
             }
         });
 
@@ -147,9 +148,9 @@ public class AddDocumentActivity extends AppCompatActivity {
 
     private void save(){
         nama = mNama.getText().toString();
-        penulis = mNama.getText().toString();
-        penerbit = mNama.getText().toString();
-        deskripsi = mNama.getText().toString();
+        penulis = mPenulis.getText().toString();
+        penerbit = mPenerbit.getText().toString();
+        deskripsi = mDeskripsi.getText().toString();
         String thn = String.valueOf(thnTerbit);
 
         HashMap<String, RequestBody> map = new HashMap<>();
@@ -349,32 +350,32 @@ public class AddDocumentActivity extends AppCompatActivity {
         return file;
     }
 
-    private DatePickerDialog createDialogWithoutDateField() {
+    private void createDialogWithoutDateField() {
+        final Calendar today = Calendar.getInstance();
 
-        DatePickerDialog dpd = new DatePickerDialog(this, null, 2014, 1, 24);
-        try {
-            java.lang.reflect.Field[] datePickerDialogFields = dpd.getClass().getDeclaredFields();
-            for (java.lang.reflect.Field datePickerDialogField : datePickerDialogFields) {
-                if (datePickerDialogField.getName().equals("mDatePicker")) {
-                    datePickerDialogField.setAccessible(true);
-                    DatePicker datePicker = (DatePicker) datePickerDialogField.get(dpd);
-                    java.lang.reflect.Field[] datePickerFields = datePickerDialogField.getType().getDeclaredFields();
-                    for (java.lang.reflect.Field datePickerField : datePickerFields) {
-                        Log.i("test", datePickerField.getName());
-                        if ("mDaySpinner".equals(datePickerField.getName())) {
-                            datePickerField.setAccessible(true);
-                            Object dayPicker = datePickerField.get(datePicker);
-                            ((View) dayPicker).setVisibility(View.GONE);
-                        }
+        MonthPickerDialog.Builder builder = new MonthPickerDialog.Builder(AddDocumentActivity.this,
+                new MonthPickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(int selectedMonth, int selectedYear) {
+                        // on date set }
                     }
-                }
-            }
-        }
-        catch (Exception ex) {
-        }
-        thnTerbit = dpd.getDatePicker().getYear();
-        mThnTerbit.setText(String.valueOf(dpd.getDatePicker().getYear()));
-        return dpd;
+
+        },today.get(Calendar.YEAR),today.get(Calendar.MONTH));
+
+        builder.setMinYear(1990)
+                .setActivatedYear(2019)
+                .setMaxYear(2099)
+                .showYearOnly()
+       .setOnYearChangedListener(new MonthPickerDialog.OnYearChangedListener() {
+                                @Override
+                                public void onYearChanged(int selectedYear) { // on year selected
+                                    thnTerbit = selectedYear;
+                                    mThnTerbit.setText(String.valueOf(selectedYear));
+                                }
+       })
+       .build()
+       .show();
+
     }
 
     @Override

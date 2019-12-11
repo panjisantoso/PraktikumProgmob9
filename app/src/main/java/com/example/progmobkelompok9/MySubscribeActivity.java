@@ -55,12 +55,9 @@ public class MySubscribeActivity extends AppCompatActivity {
     private void setting(){
         if (userList.isEmpty()){
             recyclerView.setVisibility(View.GONE);
-            progressBar.setVisibility(View.VISIBLE);
         }
         else{
             recyclerView.setVisibility(View.VISIBLE);
-            progressBar.setVisibility(View.GONE);
-
             adapter = new SubscriberAdapter(this, userList);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -78,14 +75,17 @@ public class MySubscribeActivity extends AppCompatActivity {
                         try {
                             userList.addAll(response.body());
                             setting();
+                            progressBar.setVisibility(View.GONE);
                         }catch (Exception e){
                             Log.e("error",e.getMessage());
+                            progressBar.setVisibility(View.GONE);
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<User>> call, Throwable t) {
                         Log.e("error",t.getMessage());
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
     }

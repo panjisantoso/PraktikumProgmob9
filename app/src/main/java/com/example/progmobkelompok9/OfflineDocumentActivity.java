@@ -1,5 +1,6 @@
 package com.example.progmobkelompok9;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,21 +24,24 @@ public class OfflineDocumentActivity extends AppCompatActivity {
     String[] daftar;
     android.widget.ListView ListView;
     SharedPreferences sharedPreferences;
-    Boolean session;
-    String idUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offline_document);
+        ActionBar ab = getSupportActionBar();
+        ab.setTitle("Offline Document");
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayShowHomeEnabled(true);
+
         dbHelper = new DBHelper(this);
         sharedPreferences = getSharedPreferences(StringFixed.KEY_LOGIN,MODE_PRIVATE);
-        idUser = sharedPreferences.getString(StringFixed.KEY_ID_USER,"");
-        session = sharedPreferences.getBoolean(StringFixed.KEY_SESSION,false);
+//        idUser = sharedPreferences.getString(StringFixed.KEY_ID_USER,"");
+//        session = sharedPreferences.getBoolean(StringFixed.KEY_SESSION,false);
         List();
     }
     public void List(){
         SQLiteDatabase db = dbHelper.getReadableDatabase(); //memanggil db untuk dilihat isinya
-        cursor = db.rawQuery("SELECT * FROM document WHERE id_user = " + idUser, null);
+        cursor = db.rawQuery("SELECT * FROM document", null);
         daftar = new String[cursor.getCount()];
 
         for (int cc=0; cc < cursor.getCount(); cc++){
@@ -77,5 +81,11 @@ public class OfflineDocumentActivity extends AppCompatActivity {
             }
         });
         ((ArrayAdapter)ListView.getAdapter()).notifyDataSetInvalidated();//ngasi tau kalo data source nya sudah tidak berlaku atau ada perubahan
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

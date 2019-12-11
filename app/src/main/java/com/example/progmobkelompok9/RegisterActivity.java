@@ -5,13 +5,10 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -24,14 +21,17 @@ import android.widget.TextView;
 import com.example.progmobkelompok9.api.ApiClient;
 import com.example.progmobkelompok9.api.ApiService;
 import com.example.progmobkelompok9.model.Auth;
-import com.example.progmobkelompok9.model.ResponseMessage;
 import com.example.progmobkelompok9.model.User;
 import com.example.progmobkelompok9.util.DateFormat;
-import com.example.progmobkelompok9.util.SqliteHelper;
 import com.example.progmobkelompok9.util.StringFixed;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,12 +40,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
-import java.util.TimeZone;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -81,6 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     //Declaration SqliteHelper
 //    SqliteHelper sqliteHelper;
+    String fcmToken;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -142,7 +139,25 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validate()) {
-                    save();
+                    progressDoalog = new ProgressDialog(RegisterActivity.this);
+                    progressDoalog.setMessage("Register & Login....");
+                    progressDoalog.show();
+
+                    FirebaseInstanceId.getInstance().getInstanceId()
+                            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                                    if (!task.isSuccessful()) {
+                                        Log.w("TOKEN", "getInstanceId failed", task.getException());
+                                        return;
+                                    }
+                                    fcmToken = task.getResult().getToken();
+                                    save(fcmToken);
+                                    // Get new Instance ID token
+
+                                    Log.e("token", fcmToken);
+                                }
+                            });
                 }
 
             }
@@ -173,17 +188,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    private void save(){
-        progressDoalog = new ProgressDialog(RegisterActivity.this);
-        progressDoalog.setMessage("Register & Login....");
-        progressDoalog.show();
-
+    private void save(String fcmToken){
         HashMap<String, RequestBody> map = new HashMap<>();
         map.put(StringFixed.KEY_NAME, RequestBody.create(okhttp3.MultipartBody.FORM, name));
         map.put(StringFixed.KEY_ALAMAT, RequestBody.create(okhttp3.MultipartBody.FORM, alamat));
         map.put(StringFixed.KEY_TGL_LAHIR, RequestBody.create(okhttp3.MultipartBody.FORM, tglLahir));
         map.put(StringFixed.KEY_USERNAME, RequestBody.create(okhttp3.MultipartBody.FORM, username));
         map.put(StringFixed.KEY_PASSWORD, RequestBody.create(okhttp3.MultipartBody.FORM, password));
+        map.put(StringFixed.KEY_FCM_TOKEN, RequestBody.create(okhttp3.MultipartBody.FORM, fcmToken));
 
         ApiClient.getClient()
                 .create(ApiService.class)
@@ -191,9 +203,9 @@ public class RegisterActivity extends AppCompatActivity {
                 .enqueue(new Callback<Auth>() {
                     @Override
                     public void onResponse(Call<Auth> call, Response<Auth> response) {
-                        Log.e("get",response.message());
-                        try {
 
+                        try {
+                            Log.e("get",response.message());
                             User user = response.body().getUser();
                             editorPreferences.putString(StringFixed.KEY_ID_USER,user.getIdUser());
                             editorPreferences.putString(StringFixed.KEY_NAME,user.getNamaUser());

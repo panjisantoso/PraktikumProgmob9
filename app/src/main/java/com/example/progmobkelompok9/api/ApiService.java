@@ -40,6 +40,12 @@ public interface ApiService {
             @Part MultipartBody.Part image,
             @PartMap Map<String,RequestBody> text);
 
+    @FormUrlEncoded
+    @POST("update-fcm-token")
+    Call<ResponseMessage> updateFcmToken(
+            @Field("id_user") String idUser,
+            @Field("fcm_token") String fcmToken);
+
     @Multipart
     @POST("edit-profil")
     Call<Auth> editProfile(
@@ -48,6 +54,9 @@ public interface ApiService {
 
     @GET("document")
     Call<List<Document>> getDocument();
+
+    @GET("get-category-document")
+    Call<List<Document>> getCategoryDocument(@Query("id_category") String idCategory);
 
     @GET("mydocument")
     Call<List<Document>> getMyDocument(@Query("id_user") String idUser);
@@ -101,4 +110,15 @@ public interface ApiService {
 
     @GET("delete-subscribe")
     Call<ResponseMessage> deleteSubscribe(@Query("id_subscriber") String idSubscriber);
+
+    @FormUrlEncoded
+    @POST("store-history")
+    Call<ResponseMessage> storeHistory(@Field("id_user") String idUser,
+                                         @Field("id_document") String idDocument);
+
+    @GET("get-history")
+    Call<List<Document>> getHistory(@Query("id_user") String idUser);
+
+    @GET("delete-history")
+    Call<ResponseMessage> deleteHistory(@Query("id_history") String idHistory);
 }

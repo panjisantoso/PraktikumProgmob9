@@ -3,7 +3,9 @@ package com.example.progmobkelompok9.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +30,7 @@ import com.example.progmobkelompok9.api.ApiService;
 import com.example.progmobkelompok9.model.Document;
 import com.example.progmobkelompok9.model.Like;
 import com.example.progmobkelompok9.model.ResponseMessage;
+import com.example.progmobkelompok9.offlineSQLite.DBHelper;
 import com.example.progmobkelompok9.util.StringFixed;
 
 import java.util.List;
@@ -43,6 +46,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
     private LayoutInflater inflater;
     Document document;
     String statusLike;
+    Boolean session;
+    SharedPreferences sharedPreferences;
 
     public HomeAdapter(Context context, List<Document> documentsList) {
         this.context = context;
@@ -60,6 +65,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
         document = documentList.get(position);
+        sharedPreferences = context.getSharedPreferences(StringFixed.KEY_LOGIN,Context.MODE_PRIVATE);
+        session = sharedPreferences.getBoolean(StringFixed.KEY_SESSION,false);
         Glide.with(context)
                 .load(BuildConfig.BASE_URL_IMAGE+document.getImage())
                 .centerCrop()
@@ -99,6 +106,34 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
             }
         });
 
+        holder.read.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                seeDocumentstoreHistory(documentList.get(position).getIdDocument(),documentList.get(position).getPath());
+            }
+        });
+
+        holder.readTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                seeDocumentstoreHistory(documentList.get(position).getIdDocument(),documentList.get(position).getPath());
+            }
+        });
+
+        holder.offline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                offlineDocument(documentList.get(position));
+            }
+        });
+
+        holder.offlineTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                offlineDocument(documentList.get(position));
+            }
+        });
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,6 +161,61 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
         });
     }
 
+    private void offlineDocument(Document document){
+//        String mPath = BuildConfig.BASE_URL_DOCUMENT + path;
+        DBHelper dbHelper = new DBHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        db.execSQL("INSERT INTO document(judul, category, penulis, penerbit, tahun_terbit, nama_user, deskripsi, " +
+                "path, tgl_upload, status_aktif, " +
+                "id_user" +
+                ") VALUES('" +
+                document.getNamaDocument() + "','" +
+                document.getNamaCategory() + "','" +
+                document.getPenulis() + "','" +
+                document.getPenerbit() + "','" +
+                document.getTahunTerbit() + "','" +
+                document.getNamaUser() +  "','" +
+                document.getDeskripsi() + "','" +
+                document.getPath() + "','" +
+                document.getTglUpload() + "','" +
+                document.getStatusAktif() + "','" +
+                document.getIdUser() +
+                "')");
+
+        Toast.makeText(context, "Download Document Success", Toast.LENGTH_LONG).show();
+    }
+
+    private void seeDocumentstoreHistory(String idDocument, String path){
+        if (session){
+            String idUser = sharedPreferences.getString(StringFixed.KEY_ID_USER,"");
+
+            String url = BuildConfig.BASE_URL_DOCUMENT + path;
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            context.startActivity(i);
+
+            ApiClient.getClient()
+                    .create(ApiService.class)
+                    .storeHistory(idUser,idDocument)
+                    .enqueue(new Callback<ResponseMessage>() {
+                        @Override
+                        public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
+                            Log.e("simpan history","berhasil");
+                        }
+
+                        @Override
+                        public void onFailure(Call<ResponseMessage> call, Throwable t) {
+                            Log.e("error",t.getMessage());
+                        }
+                    });
+        }
+        else{
+            Toast.makeText(context,"you need to login to see this document",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
     @Override
     public int getItemCount() {
         return getDocumentList().size();
@@ -140,8 +230,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
     }
 
     private void storeLike(String idDocument, final String statusLike1, final MyViewHolder holder){
-        SharedPreferences sharedPreferences = context.getSharedPreferences(StringFixed.KEY_LOGIN,Context.MODE_PRIVATE);
-        Boolean session = sharedPreferences.getBoolean(StringFixed.KEY_SESSION,false);
+
         if (session){
             String idUser = sharedPreferences.getString(StringFixed.KEY_ID_USER,"");
 

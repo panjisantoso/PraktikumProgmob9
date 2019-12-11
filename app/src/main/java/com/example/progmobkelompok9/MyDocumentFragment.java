@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,7 +40,7 @@ public class MyDocumentFragment extends Fragment {
     FloatingActionButton mAdd;
 
     SharedPreferences sharedPreferences;
-
+    ProgressBar progressBar;
     RecyclerView recyclerView;
     MyDocumentAdapter adapter;
     List<Document> documentList = new ArrayList<Document>();
@@ -50,7 +51,7 @@ public class MyDocumentFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_mydocument, container, false);
 
         sharedPreferences = getActivity().getSharedPreferences(StringFixed.KEY_LOGIN, Context.MODE_PRIVATE);
-
+        progressBar = rootView.findViewById(R.id.mydocument_progressBar);
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.mydocument_toolbar);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         ActionBar ab = ((AppCompatActivity)getActivity()).getSupportActionBar();
@@ -81,9 +82,11 @@ public class MyDocumentFragment extends Fragment {
         if (documentList.isEmpty()){
             recyclerView.setVisibility(View.GONE);
 //            emptyTxt.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.GONE);
         }
         else{
             recyclerView.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.GONE);
 //            emptyTxt.setVisibility(View.GONE);
             adapter = new MyDocumentAdapter(getContext(), documentList);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -105,15 +108,18 @@ public class MyDocumentFragment extends Fragment {
                         try {
                             documentList.addAll(response.body());
                             setRecycler();
+                            progressBar.setVisibility(View.GONE);
                         }
                         catch (Exception e){
                             Log.e("error",e.getMessage());
+                            progressBar.setVisibility(View.GONE);
                         }
                     }
 
                     @Override
                     public void onFailure(Call<List<Document>> call, Throwable t) {
                         Log.e("error bro",t.toString());
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
     }

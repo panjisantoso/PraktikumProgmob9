@@ -35,9 +35,15 @@ public class StringFixed {
             KEY_TGL_UPLOAD = "tgl_upload",
             KEY_STATUS_AKTIF = "status_aktif",
             KEY_IMAGE_USER = "image_user";
-
+    public static String content = "";
+    public static String title = "";
+    public static String imageUrl = "";
+    public static String gameUrl = "";
+    public static String token = "token";
     public StringFixed() {
     }
+
+
 
     public static String getKeySession() {
         return KEY_SESSION;
